@@ -34,7 +34,7 @@ jobs:
         run: R CMD INSTALL .
 
       - name: Detect
-        run: Rscript -e 'tellme::tellme(); tellme::versions(); print(Sys.info())'
+        run: Rscript -e 'tellme::everything(); print(Sys.info())'
 
       #- name: Test
       #  run: ./run.sh run_tests
