@@ -1,6 +1,5 @@
 \name{tellme-package}
 \alias{tellme-package}
-\alias{tellme}
 \docType{package}
 \title{\packageTitle{tellme}}
 \description{\packageDescription{tellme}}
