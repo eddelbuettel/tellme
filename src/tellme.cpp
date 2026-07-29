@@ -5,17 +5,17 @@
 #include <TargetConditionals.h>
 #endif
 
-//' @title detector
+//' @title tellme
 //'
 //' @description Store a number of different compile-time \code{#define} values
 //' and returns them in a named character vector.
 //'
 //' @return A named logical vector.
-//' @useDynLib detector, .registration=TRUE
+//' @useDynLib tellme, .registration=TRUE
 //' @importFrom Rcpp evalCpp
 //' @export
 // [[Rcpp::export]]
-Rcpp::LogicalVector detector() {
+Rcpp::LogicalVector tellme() {
   Rcpp::LogicalVector v(9);  // defaults to all zeros, ie all FALSE
 
 #if defined(__APPLE__)

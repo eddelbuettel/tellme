@@ -1,9 +1,9 @@
 % tinyrox says don't edit this manually, but it can't stop you!
-\name{detector}
-\alias{detector}
-\title{detector}
+\name{tellme}
+\alias{tellme}
+\title{tellme}
 \usage{
-detector()
+tellme()
 }
 \value{
 A named logical vector.

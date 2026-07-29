@@ -10,19 +10,19 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
-// detector
-Rcpp::LogicalVector detector();
-RcppExport SEXP _detector_detector() {
+// tellme
+Rcpp::LogicalVector tellme();
+RcppExport SEXP _tellme_tellme() {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(detector());
+    rcpp_result_gen = Rcpp::wrap(tellme());
     return rcpp_result_gen;
 END_RCPP
 }
 // versions
-Rcpp::LogicalVector versions();
-RcppExport SEXP _detector_versions() {
+Rcpp::IntegerVector versions();
+RcppExport SEXP _tellme_versions() {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -32,12 +32,12 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_detector_detector", (DL_FUNC) &_detector_detector, 0},
-    {"_detector_versions", (DL_FUNC) &_detector_versions, 0},
+    {"_tellme_tellme", (DL_FUNC) &_tellme_tellme, 0},
+    {"_tellme_versions", (DL_FUNC) &_tellme_versions, 0},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_detector(DllInfo *dll) {
+RcppExport void R_init_tellme(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }

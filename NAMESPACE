@@ -1,9 +1,9 @@
 # tinyrox says don't edit this manually, but it can't stop you!
 
-export(detector)
 export(flags)
+export(tellme)
 export(versions)
 
 importFrom(Rcpp,evalCpp)
 
-useDynLib(detector, .registration=TRUE)
+useDynLib(tellme, .registration=TRUE)
