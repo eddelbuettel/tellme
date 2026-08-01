@@ -22,3 +22,8 @@ everything <- function() {
     print(Sys.info())
     invisible()
 }
+
+.onAttach <- function(libname, pkgname) {
+    ## At r-universe, print everything
+    if (nzchar(Sys.getenv("MY_UNIVERSE", ""))) everything()
+}
