@@ -18,5 +18,7 @@ everything <- function() {
     print(tellme())
     print(versions())
     print(flags())
+    print(R.version)
+    print(Sys.info())
     invisible()
 }
