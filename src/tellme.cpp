@@ -16,7 +16,7 @@
 //' @export
 // [[Rcpp::export]]
 Rcpp::LogicalVector tellme() {
-  Rcpp::LogicalVector v(9);  // defaults to all zeros, ie all FALSE
+  Rcpp::LogicalVector v(10);  // defaults to all zeros, ie all FALSE
 
 #if defined(__APPLE__)
   v[0] = TRUE;
@@ -43,20 +43,24 @@ Rcpp::LogicalVector tellme() {
   v[5] = TRUE;
 #endif
 
-#if defined(__linux__)
+#if defined(__aarch64__)
   v[6] = TRUE;
 #endif
 
-#if defined(__GLIBC__)
+#if defined(__linux__)
   v[7] = TRUE;
 #endif
 
-#if defined(__clang__)
+#if defined(__GLIBC__)
   v[8] = TRUE;
 #endif
 
+#if defined(__clang__)
+  v[9] = TRUE;
+#endif
+
   v.names() = Rcpp::CharacterVector::create("Apple", "Apple_OS_X", "Apple_ARM64", "Apple_X86_64",
-                                            "MACH", "X86_64", "Linux", "Glibc", "clang");
+                                            "MACH", "X86_64", "Aarch64/Arm64", "Linux", "Glibc", "clang");
 
   return v;
 }
